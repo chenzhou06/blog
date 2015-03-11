@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+
+    <title>Test Page - Chen Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="shortcut icon" href="/static/favicon.ico">
+
+    <script type="text/javascript"
+      src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </head>
+  <body>
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Index</a></li>
+            <li>About</li>
+        </ul>
+    </div>
+
+    
+    <h1>my blog</h1>
+    
+    <h2>Test Page</h2>
+    <h1>H1</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h2>Lists</h2>
+<ul>
+<li>one</li>
+<li>two</li>
+<li>three</li>
+</ul>
+<h2>Horizontal rules</h2>
+<hr />
+<h2>Super/Subscript</h2>
+<p>H~2~O is a liquid.  2^10^ is 1024.</p>
+<h2>Flask Links</h2>
+<p><a href="{{ url_for("article", path=article.path) }}">Link</a></p>
+<h2>Citations</h2>
+<p>@kuhn2013applied have new book on caret.</p>
+<h2>Source Code Highlighting</h2>
+<h1></h1>
+<h3>Python</h3>
+<p>```python
+from random import choice</p>
+<p>print choice(range(1, 10))
+```</p>
+<pre><code>from random import choice
+
+print choice(range(1, 10))
+</code></pre>
+<h3>Haskell</h3>
+<pre><code>haskell
+fibs = 0 : 1 : zipWith (+) fibs (tail fibs)
+</code></pre>
+<h2>Math</h2>
+<p>we have \(f(x)=\sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n\) and</p>
+<h2>Unicode</h2>
+<p>萬大事都有得解決</p>
+<h1>References</h1>
+
+    <div class="nav">
+        <div class="before">
+            
+            <p>Before: <a href="/todo/">Todo</a></p>
+            
+        </div>
+
+        <div class="after">
+            
+                <p>After: None</p>
+            
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p><small>As English is my second language, if you find any problem in this site, please Email <a href="mailto:hn100hn@hotmail.com">hn100hn@hotmail.com</a> to help me. </small></p>
+    </footer>
+
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
