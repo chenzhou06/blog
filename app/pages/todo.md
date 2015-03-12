@@ -17,3 +17,7 @@ published: 2015-3-10
 * navigation, articles before and after
 * navigate bar, back to index, about auther
 * date of publish, author name
+
+## Manage
+
+* create new blog
