@@ -15,8 +15,6 @@ def create_app(config_name):
     bootstrap.init_app(app)
     flatpages.init_app(app)
 
-    # from . import views
-
     return app
 
 app = create_app("default")

@@ -1,20 +1,18 @@
 {% extends "base.html" %}
-
 {% block title %}Home | Chen Zhou{% endblock title %}
-
 {% block page_content %}
+<div class="row">
     <div class="lates-blogs">
-        <h2>List of stuff</h2>
+        <h2>Latest Posts</h2>
         {% with pages=articles  %}
             {% include "_list.html" %}
         {% endwith %}
-    </div>
-
     <div class="alltags">
         <h2>All Tags</h2>
         {% for page_tag in alltags %}
             <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
         {% endfor %}
     </div>
-
+</div>
+</div>
 {% endblock page_content %}

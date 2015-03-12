@@ -1,8 +1,6 @@
 title: Todo
 published: 2015-3-10
 
-# todo
-
 ## bage layout
 
 ### index page

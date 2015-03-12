@@ -1,36 +1,47 @@
 {% extends "base.html" %}
-
 {% block title %}{{ article.title }} - Chen Zhou{% endblock title %}
-
 {% block head %}
-    {{ super() }}
-    <script type="text/javascript"
-      src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/default.min.css">
-    <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+{{ super() }}
+<script type="text/javascript"
+src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 {% endblock head %}
-
 {% block page_content %}
-    <h2>{{ article.title }}</h2>
-    {{ article.html | safe }}
-
-    <div class="nav">
-        <div class="before">
-            {% if before %}
-            <p>Before: <a href="{{ url_for("article", path=before.path) }}">{{ before.title }}</a></p>
-            {% else %}
-                <p>Before: This is the newest blog.</p>
-            {% endif %}
+<div>
+    <div class="row">
+        <div class="container">
+            <h1>{{ article.title | title }}</h1>
+            <div>
+                <span>{{ article.meta.get("published") }}</span>
+                {% if article.meta.get("tags") %}| Tags:
+                    {% for page_tag in article.meta.get("tags", []) %}
+                        <a href="{{ url_for("tag", tag=page_tag) }}"> {{ page_tag | capitalize }}</a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            {{ article.html | safe }}
         </div>
-
-        <div class="after">
-            {% if after %}
-            <p>After: <a href="{{ url_for("article", path=after.path) }}">{{ after.title }}</a></p>
-            {% else %}
-                <p>After: None</p>
-            {% endif %}
-        </div>
-
     </div>
+</div>
+<div>
+    <div class="row">
+        <div class="before left">
+            {% if before %}
+                <a class="waves-effect waves-light btn" href="{{ url_for("article", path=before.path) }}">Prev: {{ before.title }}</a>
+            {% else %}
+                <a class="btn disabled">Prev: This is the newest</a>
+            {% endif %}
+        </div>
+        <div class="after right">
+            {% if after %}
+                <a class="waves-effect waves-light btn" href="{{ url_for("article", path=after.path) }}">Next: {{ after.title }}</a>
+            {% else %}
+                <a class="btn disabled">Next: This is the end.</a>
+            {% endif %}
+        </div>
+    </div>
+    
+</div>
 {% endblock page_content %}

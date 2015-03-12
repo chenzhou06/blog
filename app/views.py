@@ -26,6 +26,14 @@ def index():
                            articles=latest[:10], alltags=tags)
 
 
+@app.route("/all/")
+def all():
+    published = allarticles(flatpages)
+    latest = sorted(published, reverse=True,
+                    key=lambda p: p.meta["published"])
+    return render_template("all.html", articles=latest[:])
+
+
 @app.route("/<path:path>/")
 def article(path):
     article = flatpages.get_or_404(path)
