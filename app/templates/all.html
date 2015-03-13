@@ -1,9 +1,25 @@
 {% extends "base.html" %}
 {% block title %}All Articles | ChenZhou{% endblock title %}
 {% block page_content %}
-    <div>
+<h2>All Posts</h2>
+<div class="divider"></div>
+<div class="row">
+    <div class="col s7">
         {% with pages=articles  %}
-            {% include "_list.html" %}
+        {% include "_list.html" %}
         {% endwith %}
     </div>
+    <div class="col s4 offset-s1">
+        <br>
+        <div class="card-panel">
+            <span class="">All Tags</span>
+            <p>
+            {% for page_tag in alltags %}
+                <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+            {% endfor %}
+            </p>
+        </div>
+    </div>
+</div>
+
 {% endblock page_content %}

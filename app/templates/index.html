@@ -1,18 +1,50 @@
 {% extends "base.html" %}
 {% block title %}Home | Chen Zhou{% endblock title %}
 {% block page_content %}
-<div class="row">
-    <div class="lates-blogs">
-        <h2>Latest Posts</h2>
-        {% with pages=articles  %}
-            {% include "_list.html" %}
-        {% endwith %}
-    <div class="alltags">
-        <h2>All Tags</h2>
-        {% for page_tag in alltags %}
-            <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
-        {% endfor %}
+
+<div class="divider"></div>
+<div class="section">
+    <div class="card-panel">
+        <div>
+            <h2>Welcome!</h2>
+        </div>
+        <p>
+            I'm Chen Zhou.
+        </p>
+        <div>
+            <p>
+                A postgratuate-student in Xiangtan University, Hunan, China. Intreseted in <em>Economics, Programming, and English lanugage.</em>
+            </p>
+            <p>
+                This site is used to record my thinking and daily life.
+            </p>
+        </div>
     </div>
 </div>
+
+<div class="divider"></div>
+<div class="section">
+    <div>
+        <h5>Latest Posts</h5>
+    </div>
+    <div class="row">
+        <div class="col s7">
+            {% with pages=articles  %}
+            {% include "_list.html" %}
+            {% endwith %}
+        </div>
+        <div class="col s5">
+            <br>
+            <div class="card-panel col s11 offset-s1">
+                <span class="">All Tags</span>
+                <p>
+                {% for page_tag in alltags %}
+                    <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+                {% endfor %}
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock page_content %}

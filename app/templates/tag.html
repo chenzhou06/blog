@@ -1,8 +1,12 @@
 {% extends "base.html" %}
-
 {% block page_content %}
     <h2>List of stuff tagged <em>{{ tag }}</em></h2>
-    {% with pages=articles  %}
-        {% include "_list.html" %}
-    {% endwith %}
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col s12">
+            {% with pages=articles  %}
+            {% include "_list.html" %}
+        {% endwith %}
+    </div>
+</div>
 {% endblock page_content %}

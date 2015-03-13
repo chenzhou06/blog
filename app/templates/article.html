@@ -12,7 +12,7 @@ src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTM
 <div>
     <div class="row">
         <div class="container">
-            <h1>{{ article.title | title }}</h1>
+            <h2>{{ article.title | title }}</h2>
             <div>
                 <span>{{ article.meta.get("published") }}</span>
                 {% if article.meta.get("tags") %}| Tags:
@@ -21,15 +21,21 @@ src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTM
                     {% endfor %}
                 {% endif %}
             </div>
-            {{ article.html | safe }}
+            <br>
+            <div class="divider"></div>
+            <div class="section">
+                {{ article.html | safe }}
+            </div>
+            <div class="divider"></div>
         </div>
     </div>
 </div>
-<div>
+
+<div class="section">
     <div class="row">
         <div class="before left">
             {% if before %}
-                <a class="waves-effect waves-light btn" href="{{ url_for("article", path=before.path) }}">Prev: {{ before.title }}</a>
+                <a class="waves-effect waves-light btn" href="{{ url_for("article", path=before.path) }}">Prev: {{ before.title }}</span></a>
             {% else %}
                 <a class="btn disabled">Prev: This is the newest</a>
             {% endif %}

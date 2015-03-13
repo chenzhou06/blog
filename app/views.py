@@ -31,7 +31,8 @@ def all():
     published = allarticles(flatpages)
     latest = sorted(published, reverse=True,
                     key=lambda p: p.meta["published"])
-    return render_template("all.html", articles=latest[:])
+    tags = alltags(flatpages)
+    return render_template("all.html", articles=latest[:], alltags=tags)
 
 
 @app.route("/<path:path>/")
@@ -51,3 +52,8 @@ def article(path):
 def tag(tag):
     tagged = [p for p in flatpages if tag in p.meta.get("tags", [])]
     return render_template("tag.html", articles=tagged, tag=tag)
+
+
+@app.route("/about/")
+def about():
+    return render_template("about.html", articles=article)
