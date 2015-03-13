@@ -2,11 +2,10 @@
 {% block title %}{{ article.title }} - Chen Zhou{% endblock title %}
 {% block head %}
 {{ super() }}
-<script type="text/javascript"
-src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/default.min.css">
-<script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/mystyle.css") }}">
 {% endblock head %}
 {% block page_content %}
 <div>
@@ -24,7 +23,9 @@ src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTM
             <br>
             <div class="divider"></div>
             <div class="section">
-                {{ article.html | safe }}
+                <div class="article-content">
+                    {{ article.html | safe }}
+                </div>
             </div>
             <div class="divider"></div>
         </div>
@@ -51,3 +52,11 @@ src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTM
     
 </div>
 {% endblock page_content %}
+
+{% block scripts %}
+{{ super() }}
+<script type="text/javascript"
+src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{% endblock scripts %}

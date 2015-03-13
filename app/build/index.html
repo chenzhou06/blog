@@ -1,79 +1,191 @@
 <!DOCTYPE html>
 <html>
-  <head>
-
+<head>
     <title>Home | Chen Zhou</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link rel="shortcut icon" href="/static/favicon.ico">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
-  </head>
-  <body>
     
-    <div class="navbar">
-        <ul>
-            <li><a href="/">Index</a></li>
-            <li>About</li>
-        </ul>
+  
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    
+  <link rel="shortcut icon" href="/static/favicon.ico">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+    
+  <nav class="grey darken-2">
+    <div class="container nav-wrapper">
+      <a href="/" class="brand-logo">ChenZhou<em><small>'s blog</small></em></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/all/">All Posts</a></li>
+        <li><a href="/about/">About</a></li>
+      </ul>
     </div>
+  </nav>
 
     
-    <div class="container">
-        <h1>my blog</h1>
-        
-    <div class="lates-blogs">
-        <h2>List of stuff</h2>
-        
-            <ul>
-
-    <li>
-        <a href="/chi/">中文测试</a>
+  <div class="container">
     
-    </li>
 
-    <li>
-        <a href="/todo/">Todo</a>
-    
-    </li>
+<div class="divider"></div>
+<div class="section">
+    <div class="card-panel">
+        <div>
+            <h2>Welcome!</h2>
+        </div>
+        <p>
+            I'm Chen Zhou.
+        </p>
+        <div>
+            <p>
+                A postgratuate-student in Xiangtan University, Hunan, China. Intreseted in <em>Economics, Programming, and English lanugage.</em>
+            </p>
+            <p>
+                This site is used to record my thinking and daily life.
+            </p>
+        </div>
+    </div>
+</div>
 
-    <li>
-        <a href="/build_the_blog/">Build the Blog - Day 0</a>
+<div class="divider"></div>
+<div class="section">
+    <div>
+        <h5>Latest Posts</h5>
+    </div>
+    <div class="row">
+        <div class="col s7">
+            
+            <ul class="posts">
     
-        | Tagged:
-        
-            <a href="/tag/programming/">programming</a>
-        
+        <li class="post">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card grey lighten-2">
+                        <div class="card-content">
+                            <div class="post-date">
+                            <span>2015-3-11</span>
+                        </div>
+                        <div class="post-title card-title">
+                            <a href="/chi/">中文测试</a>
+                        </div>
+                        <div class="post-preview">
+                            你好，世界 欢迎，谢谢。...
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
     
-    </li>
-
-    <li>
-        <a href="/test/">Test Page</a>
+        <li class="post">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card grey lighten-2">
+                        <div class="card-content">
+                            <div class="post-date">
+                            <span>2015-3-10</span>
+                        </div>
+                        <div class="post-title card-title">
+                            <a href="/build_the_blog/">Build the Blog - Day 0</a>
+                        </div>
+                        <div class="post-preview">
+                            I started another python project for my personal blog websit. After several searchings on google, I decided to use FlatPages to create my blog. At the beginning I thought I can use a package called Flask-FlatPages-Pandoc to render my markdown docu...
+                        </div>
+                        
+                            <br>
+                            <div class="post-tags card-action">
+                                
+                                    <a href="/tag/programming/"> programming</a>
+                                
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
     
-    </li>
-
+        <li class="post">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card grey lighten-2">
+                        <div class="card-content">
+                            <div class="post-date">
+                            <span>2015-3-10</span>
+                        </div>
+                        <div class="post-title card-title">
+                            <a href="/todo/">Todo</a>
+                        </div>
+                        <div class="post-preview">
+                            bage layout index page latest posts all posts sorted by date (pagenateds) view by tags article page tag names below the article title navigation, articles before and a...
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    
+        <li class="post">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card grey lighten-2">
+                        <div class="card-content">
+                            <div class="post-date">
+                            <span>2015-3-09</span>
+                        </div>
+                        <div class="post-title card-title">
+                            <a href="/test/">Test Page</a>
+                        </div>
+                        <div class="post-preview">
+                            H1 H2 H3 H4 Lists one two three Horizontal rules Super/Subscript H~2~O is a liquid. 2^10^ is 1024. Flask Links &lt;a href=&#34;{{...
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    
 </ul>
-        
+            
+        </div>
+        <div class="col s5">
+            <br>
+            <div class="card-panel col s11 offset-s1">
+                <span class="">All Tags</span>
+                <p>
+                
+                    <a href="/tag/programming/">programming</a>
+                
+                </p>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="alltags">
-        <h2>All Tags</h2>
-        
-            <a href="/tag/programming/">programming</a>
-        
+
+  </div>
+  <footer class="page-footer grey darken-2 grey-text text-lighten-4">
+    <div class="container">
+      <div class="row">
+        <p class="center-align"><small>As English is my second language, if you find any problem in this site, please Email <a href="mailto:hn100hn@hotmail.com">hn100hn@hotmail.com</a> to help me. </small></p>
+      </div>
     </div>
-
-
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014-2015 Chen Zhou, All rights reserved.
+      </div>
     </div>
+  </footer>
 
-    <footer>
-        <p><small>As English is my second language, if you find any problem in this site, please Email <a href="mailto:hn100hn@hotmail.com">hn100hn@hotmail.com</a> to help me. </small></p>
-    </footer>
-
-
-    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  </body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+</body>
 </html>

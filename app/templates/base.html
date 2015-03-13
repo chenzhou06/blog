@@ -7,7 +7,7 @@
 {% endblock head %}
 {% block navbar %}
   <nav class="grey darken-2">
-    <div class="container nav-wrapper">
+    <div class="nav-wrapper container">
       <a href="{{ url_for("index") }}" class="brand-logo">ChenZhou<em><small>'s blog</small></em></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="{{ url_for("index") }}">Home</a></li>
@@ -33,4 +33,6 @@
       </div>
     </div>
   </footer>
+  {% block scripts %}
+  {% endblock scripts %}
 {% endblock %}
