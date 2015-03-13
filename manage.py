@@ -2,6 +2,15 @@ from app import app
 from flask_frozen import Freezer
 import sys
 import subprocess
+import os
+from datetime import datetime
+
+
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
+PAGESDIR = os.path.join(BASEDIR, "app", "pages")
+
+
+DEFAULT_EDITOR_PATH = "D:\\Program Files\\Notepad++\\notepad++.exe"
 
 
 def build():
@@ -24,6 +33,24 @@ def deploy():
         print("Success!")
     else:
         print("Failed! Try again.")
+
+
+def new(filename):
+    def markdownmeta():
+        meta_title = "title:\n"
+        meta_published = "published: {0}\n".format(datetime.today())
+        meta_tags = "tags:\n"
+        return meta_title + meta_published + meta_tags
+
+    filepath = os.path.join(PAGESDIR, filename)
+    if os.path.isfile(filepath):
+        return print("File already exists.")
+    f = open(filepath, "w")
+    f.write(markdownmeta())
+    f.close()
+    cmd = [DEFAULT_EDITOR_PATH, filepath]
+    subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                     universal_newlines=True)
 
 
 if __name__ == "__main__":
@@ -50,6 +77,8 @@ if __name__ == "__main__":
             build()
             print("deploying...")
             deploy()
+        elif sys.argv[1] and sys.argv[2]:
+            new(sys.argv[2])
     else:
         usage = "Usage:\n\trunserver\n\tbuild"
         print(usage)
