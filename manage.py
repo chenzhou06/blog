@@ -3,7 +3,7 @@ from flask_frozen import Freezer
 import sys
 import subprocess
 import os
-from datetime import datetime
+from datetime import date
 
 
 BASEDIR = os.path.abspath(os.path.dirname(__file__))
@@ -36,17 +36,19 @@ def deploy():
 
 
 def new(filename):
-    def markdownmeta():
-        meta_title = "title:\n"
-        meta_published = "published: {0}\n".format(datetime.today())
-        meta_tags = "tags:\n"
+    def markdownmeta(filename):
+        d = date.today()
+        meta_title = "title: {0}\n".format(filename)
+        meta_published = "published: {0}-{1}-{2}\n".format(d.year,
+                                                           d.month, d.day)
+        meta_tags = "tags: [ ]\n"
         return meta_title + meta_published + meta_tags
 
     filepath = os.path.join(PAGESDIR, filename)
     if os.path.isfile(filepath):
         return print("File already exists.")
     f = open(filepath, "w")
-    f.write(markdownmeta())
+    f.write(markdownmeta(filename))
     f.close()
     cmd = [DEFAULT_EDITOR_PATH, filepath]
     subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
