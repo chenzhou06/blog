@@ -20,7 +20,10 @@ def deploy():
                          stderr=subprocess.PIPE,
                          universal_newlines=True)
     p.wait()
-    print("Returncode: {0}".format(p.returncode))
+    if p.returncode == 0:
+        print("Success!")
+    else:
+        print("Failed! Try again.")
 
 
 if __name__ == "__main__":
@@ -43,7 +46,9 @@ if __name__ == "__main__":
         elif sys.argv[1] == "deploy":
             deploy()
         elif sys.argv[1] == "bad":
+            print("building...")
             build()
+            print("deploying...")
             deploy()
     else:
         usage = "Usage:\n\trunserver\n\tbuild"
