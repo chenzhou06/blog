@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Todo - Chen Zhou</title>
+    <title>Build My Blog - Day 3 - Chen Zhou</title>
     
 
   
@@ -40,33 +40,35 @@
 <div>
     <div class="row">
         <div class="container">
-            <h2>Todo</h2>
+            <h2>Build My Blog - Day 3</h2>
             <div>
-                <span>2015-3-10</span>
+                <span>2015-3-13</span>
+                | Tags:
+                    
+                        <a href="/tag/programming/"> Programming</a>
+                    
                 
             </div>
             <br>
             <div class="divider"></div>
             <div class="section">
                 <div class="article-content">
-                    <h2>bage layout</h2>
-<h3>index page</h3>
-<ul>
-<li>latest posts</li>
-<li>all posts sorted by date (pagenateds)</li>
-<li>view by tags</li>
-</ul>
-<h3>article page</h3>
-<ul>
-<li>tag names below the article title</li>
-<li>navigation, articles before and after</li>
-<li>navigate bar, back to index, about auther</li>
-<li>date of publish, author name</li>
-</ul>
-<h2>Manage</h2>
-<ul>
-<li>create new blog</li>
-</ul>
+                    <p>I have been busy building my personal web blog for several days, but I can not 
+feel satisfied with the look of my site till now.</p>
+<p>I have wasted many hours searching online to solve trivial problems, such as
+indenting <code>&lt;ul&gt;</code> elements, because the CSS package I used in my site, Materialize CSS，has forced any <code>&lt;ul&gt;</code> elements unindented and <code>&lt;li&gt;</code> elements prefixed with nothing.</p>
+<pre><code>.article-content ul {
+    margin-left: 2em;
+}
+.article-content ul li {
+    list-style: disc inside;
+}
+</code></pre>
+<p>To cover the Materialize CSS' setting, I labelled the <code>div</code> where the markdown
+files would be rendered with <code>article-content</code>. In this <code>div</code>, I set the margin at
+the left side of <code>&lt;li&gt;</code> and resumed the bullets of list item style.</p>
+<p>There are more things waited for me, the building of this site must be prolonged and improved little by little. Roma was not built in a day. During the process, 
+I can sharp my programming skill enormously, I hope.</p>
                 </div>
             </div>
             <div class="divider"></div>
@@ -78,12 +80,12 @@
     <div class="row">
         <div class="before left">
             
-                <a class="waves-effect waves-light btn" href="/buildmyblogday3/">Prev: Build My Blog - Day 3</span></a>
+                <a class="waves-effect waves-light btn" href="/gametheroy1/">Prev: Game Theory - Week 1</span></a>
             
         </div>
         <div class="after right">
             
-                <a class="waves-effect waves-light btn" href="/test/">Next: Test Page</a>
+                <a class="waves-effect waves-light btn" href="/todo/">Next: Todo</a>
             
         </div>
     </div>
