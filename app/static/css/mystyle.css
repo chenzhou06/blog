@@ -14,3 +14,9 @@ body {
     list-style: disc;
 }
 
+a.article-tag {
+/*    padding: 1px;
+    border: 1px solid #000;
+    border-radius: 5px;
+*/    text-decoration: underline;
+}

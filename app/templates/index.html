@@ -39,7 +39,7 @@
                 <span class="">All Tags</span>
                 <p>
                 {% for page_tag in alltags %}
-                    <a href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag }}</a>
+                    <a class="article-tag teal-text" href="{{ url_for("tag", tag=page_tag) }}">{{ page_tag | capitalize }}</a>
                 {% endfor %}
                 </p>
             </div>

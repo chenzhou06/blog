@@ -10,13 +10,13 @@
 {% block page_content %}
 <div>
     <div class="row">
-        <div class="container">
+        <div class="container article">
             <h2>{{ article.title | title }}</h2>
             <div>
                 <span>{{ article.meta.get("published") }}</span>
                 {% if article.meta.get("tags") %}| Tags:
                     {% for page_tag in article.meta.get("tags", []) %}
-                        <a href="{{ url_for("tag", tag=page_tag) }}"> {{ page_tag | capitalize }}</a>
+                        <a class="article-tag teal-text" href="{{ url_for("tag", tag=page_tag) }}"> {{ page_tag | capitalize }}</a>
                     {% endfor %}
                 {% endif %}
             </div>
