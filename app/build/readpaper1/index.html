@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reading Paper - Family Income - Chen Zhou</title>
+    
+
+  
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    
+  <link rel="shortcut icon" href="/static/favicon.ico">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="/static/css/mystyle.css">
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/8.4/styles/monokai_sublime.min.css">
+
+
+
+</head>
+<body>
+    
+  <nav class="grey darken-2">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo" style="margin-left: 1em"> ChenZhou<em><small>'s blog</small></em></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/all/">All Posts</a></li>
+        <!-- <li><a href="/about/">About</a></li> -->
+      </ul>
+    </div>
+  </nav>
+
+    
+  <div class="container">
+    
+<div>
+    <div class="row">
+        <div class="container article">
+            <h2>Reading Paper - Family Income</h2>
+            <div>
+                <span>2015-3-20</span>
+                | Tags:
+                    
+                        <a class="article-tag teal-text" href="/tag/Economics/"> Economics</a>
+                    
+                        <a class="article-tag teal-text" href="/tag/Learning/"> Learning</a>
+                    
+                
+            </div>
+            <br>
+            <div class="divider"></div>
+            <div class="section">
+                <div class="article-content">
+                    <p>I read a <a href="http://www.nber.org/papers/w11836">paper</a> this week for the workshop in the weekend. Its author is a Korean
+professor who worked at Seoul National University.</p>
+<p>This paper discussed the inequality of the family income in the United States. The
+author based his research on the data of <em>Annual Demographic Files on the March Current Population
+Surveys (CPS)</em>.</p>
+<h1>Analytical Framework</h1>
+<p>The author decomposed the family income into several sources.</p>
+<p>First, he calculated the average annual income of households in a given income
+decile by the formula below:
+$$N = H_h W_h P_h + H_s W_s P_s \delta + Q$$
+where \(H_h , H_s , W_h~and~W_s\) stand for the mean annual hours worked and
+the mean hourly wage rate for employed heads and spouses, respectively. 
+\(P_h~and~P_s\) stand for the employment rates for heads and spouse. \(\delta\)
+is the fraction of households in which both husband and wife are present. \(Q\)
+stands for the mean incomes from other sources.</p>
+<p>Then he used the difference in the log of average family income between to income
+deciles to measure the income inequality.
+$$ N^*=ln[N^{TOP} ] - ln[N^{BOTTOM} ] $$</p>
+<p>Combining the two equations above, we can get an equation:
+$$ N^* \approx \Phi_h (H_h^*+W_h^*+P_h^*) + \Phi_s(H_s^*+W_s^*+P_s^*+\delta)+\Phi_Q (Q^*) $$
+where \( \Phi \) stands for the weight of each of the three income sources.</p>
+<p>By differentiating the equation above, we can obtain
+$$ \Delta N^* \approx \Phi_h\Delta H_h^* + \Phi_h \Delta W_h^* + \Phi_h \Delta P_h^* $$
+$$+ \Delta \Phi_h (H_h^*+W_h^*+P_h^*) + \Phi_s \Delta H_s^*$$
+$$+\Phi_s \Delta +W_s^*+ \Phi_s \Delta P_s^* + \Phi_s \Delta \delta^*$$
+$$+ \Delta \Phi_s (H_s^* + W_s^* + P_s^* + \delta^*)$$
+$$+ \Phi_Q \Delta Q^* + \Delta \Phi_Q Q^* $$</p>
+<p>In this equation, the items at the right side stand for relative contribution of
+the different components in family income to the rise of the inequality of family
+income.</p>
+<h1>Main Results</h1>
+<p>The main discovery is that the disparity in <strong>other incomes (Q)</strong> accounts for 29%
+of the rise in the difference in income between the top 10th and bottom 10th families.</p>
+<p>The second cause to the rise of inequality is employment and hours worked, which
+explained 28% of the rise in the family income inequality.</p>
+<p>Structural changes in wages, which has been regarded as the culprit of the rise of 
+the inequality, accounted for less than a quarter of the rise in the measure of 
+family income inequality.</p>
+<p>For the upper half of the income distribution, wage changes were the dominant cause.
+Changing head's wages explained more than half of the rise in the difference between
+in incomes of the top 10 percent families and the average income.</p>
+<p>However, for the lower half of the income distribution, changes in labor supply
+and other incomes were the principal causes of the growing inequality in family
+income.</p>
+<h1>Head v.s. Householder</h1>
+<p>In this paper, 'Head' was used without any explanation. I couldn't know the author's
+meaning by the word 'head'. In the CPS' meta-data documents I found some hints
+which said 'head' has not been used from 1980s, they used 'householder' instead.
+The 'householder' was the person in whose name the house the family was owned or
+rented.</p>
+<blockquote>
+<p>The householder refers to the person
+(or one of the persons) in whose name the housing
+unit is owned or rented (maintained) or, if there is no
+such person, any adult member, excluding roomers,
+boarders, or paid employees. If the house is owned or
+rented jointly by a married couple, the householder
+may be either the husband or the wife. The person
+designated as the householder on the file is the
+"reference person" on the CPS-260 control card to
+whom the relationship of all other household members,
+if any, is recorded.</p>
+</blockquote>
+<p>A householder could be either man or woman. But the author of this paper referred
+'head' as man implicitly. He called the spouse wife several times in the context
+of talking spouse's wage. I thought we should pay attention to this.</p>
+                </div>
+            </div>
+            <div class="divider"></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="row">
+        <div class="before left">
+            
+                <a class="waves-effect waves-light btn" href="/kaohe/">Prev: 研究生考核登记表</span></a>
+            
+        </div>
+        <div class="after right">
+            
+                <a class="waves-effect waves-light btn" href="/capital/">Next: Power of Capital</a>
+            
+        </div>
+    </div>
+</div>
+
+  </div>
+  <footer class="page-footer grey darken-2 grey-text text-lighten-4">
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014-2015 Chen Zhou, All rights reserved.
+        <span class="right">Feel free to correct my English: <a class="teal-text" href="mailto:hn100hn@hotmail.com">hn100hn@hotmail.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+    <!--Import jQuery before materialize.js-->
+    
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
+    
+<!-- <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  "HTML-CSS": { linebreaks: { automatic: true },
+                extensions: ["handle-floats.js"]},
+         SVG: { linebreaks: { automatic: true } }
+});
+</script> -->
+<script type="text/javascript"
+src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>

@@ -54,8 +54,16 @@
 
 {% block scripts %}
 {{ super() }}
+<!-- <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  "HTML-CSS": { linebreaks: { automatic: true },
+                extensions: ["handle-floats.js"]},
+         SVG: { linebreaks: { automatic: true } }
+});
+</script> -->
 <script type="text/javascript"
 src="https://cdnjs.net/ajax/libs/mathjax/2.5.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script src="//cdn.jsdelivr.net/highlight.js/8.4/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+
 {% endblock scripts %}

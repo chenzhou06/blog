@@ -14,7 +14,9 @@
     {% block navbar %}{% endblock navbar %}
     {% block content %}{% endblock content %}
     <!--Import jQuery before materialize.js-->
+    {% block scripts %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="{{ url_for("static", filename="js/materialize.min.js")}}"></script>
+    {% endblock scripts %}
 </body>
 </html>
